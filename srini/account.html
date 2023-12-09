@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <div>
+        <div class="logo">
+         
+                <img src="images.png" alt="logo"><h6>Crystal Delta</h6>
+               <br>
+               <div class="sam">
+                <br> 
+             <header>
+                 <h6>Dark Mode</h6>
+                 <label class="switch">
+                     <input type="checkbox" id="darkbtn">
+                     <span class="slider round"></span>
+                 </label>
+             </header></div><hr>
+        </div>
+        <div class="form">
+            <ul class="tab-group">
+                <li class="tab "><a href="customer.html">Customer Details</a></li>
+                <li class="tab active"><a href="account.html">Account Summary</a></li>
+                <li class="tab "><a href="transfer.html">Transfer funds</a></li>
+              </ul><br>
+              <br>
+              <div class="tab-content">
+                <div id="signup">   
+                 <center> <h1 >Account Summary</h1></center><br>
+                  <section>
+    <h3>Savings Account</h3><br>
+    <select>
+        <option>--None--</option>
+    </select>
+</section>
+
+<section>
+    <h3>Current Account</h3>
+    <br>
+    <select>
+        <option >--None--</option>
+    </select>
+</section>
+
+<section>
+    <h3>Credit Account</h3><br>
+    <select>
+        <option >--None--</option>
+    </select>
+</section>
+<center>
+    <section>
+            <button style="font-weight: bold;" type="submit">Save</button>    
+            <button style="font-weight: bold;" type="submit" class="btn" onclick="openPopup()">view statement</button>
+            <a href="transfer.html"><button style="font-weight: bold;">Next</button></a>
+        </section>
+</center>
+</div>
+</div>
+</div>
+<div class="popup" id="popup">
+    <div>
+       <center> <h2>Statement</h2><br></center>
+           <h3>Account no: 577625548879</h3>
+            <table border="10" cellpadding="15" cellspacing="10">
+            <tr>
+                <td>Date</td>
+                <td>Description</td>
+                <td>Transaction id</td>
+                <td>Credit/Debit</td>
+                <td>Closing balance</td>
+            </tr><br>
+            <tr>
+                <td>30/01/2021</td>
+                <td>Mark&Spencers</td>
+                <td>325167</td>
+                <td>-2500</td>
+                <td>20,000.50</td>
+            </tr><br>
+            <tr>
+                <td>30/01/2021</td>
+                <td>Kiruba Credit</td>
+                <td>325166</td>
+                <td>+2500</td>
+                <td>22,500.50</td>
+            </tr><br>
+            <tr>
+                <td>16/02/2021</td>
+                <td>Greetings store</td>
+                <td>356614</td>
+                <td>+4000</td>
+                <td>36,000.25</td>
+            </tr><br>
+            <tr>
+                <td>08/06/2021</td>
+                <td>Glossary shop</td>
+                <td>335519</td>
+                <td>-2000</td>
+                <td>31,550.25</td>
+            </tr><br>
+            <tr>
+                <td>26/08/2021</td>
+                <td>suer market</td>
+                <td>335625</td>
+                <td>+3000</td>
+                <td>45,000</td>
+            </tr>
+        </table>
+        <center><div>
+        <button type="submit" onclick="closePopup()">Cancel</button>
+    </div></center>
+    </div>  
+</div>
+<script src="script.js"></script>
+<script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+ </script>
+</body>
+</html>

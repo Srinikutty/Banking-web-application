@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Amount</title>
+    <link rel="stylesheet" href="transfer.css">
+</head>
+<body>
+    <div>
+        <div class="logo">
+         
+                <img src="images.png" alt="logo"><h6>Crystal Delta</h6>
+                <br>
+                <div class="sam">
+                    <br> 
+                 <header>
+                     <h6>Dark Mode</h6>
+                     <label class="switch">
+                         <input type="checkbox" id="darkbtn">
+                         <span class="slider round"></span>
+                     </label>
+                 </header>
+                </div><hr>
+        <div class="form">
+            <ul class="tab-group">
+                <li class="tab "><a href="customer.html">Customer Details</a></li>
+                <li class="tab "><a href="account.html">Account summary</a></li>
+                <li class="tab active"><a href="transfer.html">Transfer funds</a></li>
+              </ul><br>
+              <br>
+              <div class="tab-content">
+                <div id="signup">   
+                 <center> <h1>Transfer Funds</h1></center><br>
+                  <section>
+    <h3>Choose an Account</h3><br>
+    <select>
+        <option >-Select an account-</option>
+    </select>
+</section>
+
+<section>
+    <h3>Choose a Beneficiary</h3><br>
+    <select>
+        <option >-Select a Beneficiary-</option>
+    </select>
+</section>
+
+<section>
+    <h3>Amount in Rupees</h3><br>
+    <input type="number" id="amount" name="amount" min="0">
+</section>
+
+<section>
+    <h3>Remarks</h3><br>
+    <textarea id="remarks" name="remarks" rows="4" cols="50"></textarea>
+</section>
+    
+<center><section >
+     <button style="font-weight: bold;" type="submit">Save</button>   
+    <button style="font-weight: bold;" type="submit"  onclick="openPopup()">Send</button>
+    <a href="Login.html"><button style="font-weight: bold;">Log Out</button></a>
+</section></center>
+</div>
+</div>
+</div>
+<div class="popup" id="popup">
+    <div>
+       <center> <h2>Success.!!</h2><br></center>
+           <P>Your Transaction Wil be Completed</P>
+            <br>
+       <center> <button type="submit"  class="btn" onclick="closePopup()">OK</button></center>
+    </div>  
+</div>
+<script src="script.js"></script>
+<script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+</script>
+</body>
+</html>

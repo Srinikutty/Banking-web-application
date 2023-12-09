@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Amount</title>
+    <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+    <div>
+        <div class="logo">
+         
+                <img src="images.png" alt="logo"><h6>Crystal Delta</h6>
+                <br>
+                <div class="sam"> 
+            <header>
+                <h6>Dark Mode</h6>
+                <label class="switch">
+                    <input type="checkbox" id="darkbtn">
+                    <span class="slider round"></span>
+                </label>
+            </header></div><hr>
+        </div>
+        <div class="form">
+            <ul class="tab-group">
+                <li class="tab active"><a href="customer.html">Customer Details</a></li>
+                <li class="tab "><a href="account.html">Account summary</a></li>
+                <li class="tab "><a href="transfer.html">Transfer funds</a></li>
+              </ul><br>
+              <br>
+              <div class="tab-content">
+                <div id="signup">   
+                 <center> <h1>Customer Details</h1></center><br>
+            <section>
+                    <h3>Enter Name :</h3><br>
+                    <input type="text" required placeholder="Name"><br>
+                    <h3>Enter Dob :</h3><br>
+                    <input type="date" required><br>
+                    <h3>Enter Mobile Number :</h3><br>
+                    <input type="number" required placeholder="00000 00000"><br>
+                    <h3>Enter Account Number :</h3><br>
+                    <input type="number" required placeholder="---- ---- ---- ----"><br>
+                    <h3>Enter IFSC Code :</h3><br>
+                    <input type="text" required placeholder=""><br>
+                    <h3>Branch Name :</h3><br>
+                    <input type="text" required><br>
+                    <h3>Enter ATM Number :</h3><br>
+                    <input type="number" required placeholder="---- ---- ----"><br>
+            </section>    
+<center><section >
+    <form>
+        
+    </form>   
+    <button style="font-weight: bold;" type="submit">Save</button>
+    <a href="account.html"><button style="font-weight: bold;" type="submit">Next Page</button></a>
+</section></center>
+</div>
+</div>
+</div>
+<div class="popup" id="popup">
+    <div>
+       <center> <h2>Success.!!</h2><br></center>
+           <P>Your Transaction Wil be Completed</P>
+            <br>
+       <center> <button type="submit"  class="btn" onclick="closePopup()">OK</button></center>
+    </div>  
+</div>
+<script src="script.js"></script>
+<script>
+let popup = document.getElementById("popup");
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+</script>
+</body>
+</html>
